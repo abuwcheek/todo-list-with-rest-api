@@ -14,19 +14,13 @@ class ListTodo(generics.ListAPIView):                        #Read
 
 
 
-class DetailTodo(generics.RetrieveUpdateAPIView):            #Update
+class DetailTodo(generics.RetrieveUpdateDestroyAPIView):            #Update
      queryset = ToDo.objects.all()
      serializer_class = ToDoSerializer
 
 
 
 class CreateTodo(generics.CreateAPIView):                     #Create
-     queryset = ToDo.objects.all()
-     serializer_class = ToDoSerializer
-
-
-
-class DeleteTodo(generics.DestroyAPIView):                         #Delete
      queryset = ToDo.objects.all()
      serializer_class = ToDoSerializer
 
